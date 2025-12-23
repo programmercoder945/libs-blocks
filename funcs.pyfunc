@@ -1,0 +1,483 @@
+{
+    "helper": [
+        "⌫ Backspace",
+        "Tab",
+        "Space",
+        "NewLN (Enter)",
+        "Delete",
+        "Enter",
+        ";",
+        "{",
+        "}",
+        ",",
+        "_",
+        "\"",
+        "'",
+        "(",
+        ")",
+        "[",
+        "]",
+        "<",
+        ">",
+        "!",
+        "?",
+        ":",
+        "@",
+        "#",
+        "$",
+        "%",
+        "^",
+        "&",
+        "*",
+        "-",
+        "+",
+        "=",
+        "/",
+        "\\",
+        "|",
+        "~",
+        "`",
+        ".",
+        "->",
+        "&&",
+        "||",
+        "++",
+        "--",
+        "+=",
+        "-=",
+        "*=",
+        "/=",
+        "%=",
+        "&=",
+        "|=",
+        "^="
+    ],
+    "structure": {
+        "void setup() {\n\t\n}": "Runs once when the board starts",
+        "void loop() {\n\t\n}": "Runs repeatedly after setup()",
+        "void myFunction() {\n\t\n}": "Custom function declaration (no parameters, no return)",
+        "int myFunction(int param) {\n\treturn value;\n}": "Custom function with parameter and return value",
+        "#define NAME value": "Preprocessor macro definition",
+        "#include <Library.h>": "Include a standard library",
+        "#include \"myheader.h\"": "Include a local header file"
+    },
+    "compound_operators": {
+        "x += y;": "Equivalent to x = x + y",
+        "x -= y;": "Equivalent to x = x - y",
+        "x *= y;": "Equivalent to x = x * y",
+        "x /= y;": "Equivalent to x = x / y",
+        "x %= y;": "Equivalent to x = x % y",
+        "x &= y;": "Equivalent to x = x & y (bitwise AND)",
+        "x |= y;": "Equivalent to x = x | y (bitwise OR)",
+        "x ^= y;": "Equivalent to x = x ^ y (bitwise XOR)"
+    },
+    "control_structures": {
+        "if (condition) {\n\t\n}": "Execute if condition is true",
+        "if (condition) {\n\t\n} else {\n\t\n}": "Execute else if condition false",
+        "if (condition1) {\n\t\n} else if (condition2) {\n\t\n} else {\n\t\n}": "Chain multiple conditions",
+        "switch (var) {\n\tcase 1:\n\t\t// code\n\t\tbreak;\n\tdefault:\n\t\t// code\n}": "Multi-way branch based on var value",
+        "for (int i = 0; i < 10; i++) {\n\t\n}": "For loop with initialization, condition, increment",
+        "while (condition) {\n\t\n}": "Loop while condition is true",
+        "do {\n\t\n} while (condition);": "Execute body at least once, then check condition",
+        "break;": "Exit loop or switch immediately",
+        "continue;": "Skip to next loop iteration",
+        "return;": "Exit function (void)",
+        "return value;": "Exit function and return value"
+    },
+    "further_syntax": {
+        ";": "Statement terminator",
+        "{}": "Block delimiters for functions/loops/conditionals",
+        "// comment": "Single-line comment",
+        "/* comment */": "Multi-line comment",
+        "#define": "Preprocessor define",
+        "#ifdef / #ifndef": "Conditional compilation",
+        "const type name = value;": "Compile-time constant"
+    },
+    "variables": {
+        "bool b = true;": "Boolean (true/false)",
+        "char c = 'A';": "8-bit signed character",
+        "unsigned char uc = 255;": "8-bit unsigned (byte)",
+        "byte b = 255;": "Alias for unsigned char",
+        "int i = -32768;": "16-bit signed integer",
+        "unsigned int ui = 65535;": "16-bit unsigned",
+        "word w = 65535;": "Alias for unsigned int",
+        "long l = -2147483648L;": "32-bit signed",
+        "unsigned long ul = 4294967295UL;": "32-bit unsigned",
+        "float f = 3.14;": "32-bit floating point",
+        "double d = 3.14;": "Same as float on most boards",
+        "String s = \"text\";": "String object",
+        "array[10]": "Array declaration",
+        "const int PIN = 13;": "Constant variable",
+        "static int count;": "Static variable (retains value)",
+        "volatile int flag;": "Volatile for interrupts/shared access"
+    },
+    "conversion": {
+        "char(c)": "Convert to char",
+        "byte(b)": "Convert to byte",
+        "int(i)": "Convert to int",
+        "word(w)": "Convert to word (unsigned int)",
+        "long(l)": "Convert to long",
+        "float(f)": "Convert to float"
+    },
+    "digital_io": {
+        "pinMode(pin, OUTPUT);": "Configure pin as output",
+        "pinMode(pin, INPUT);": "Configure pin as input",
+        "pinMode(pin, INPUT_PULLUP);": "Configure pin as input with pull-up",
+        "digitalWrite(pin, HIGH);": "Set pin to HIGH",
+        "digitalWrite(pin, LOW);": "Set pin to LOW",
+        "int val = digitalRead(pin);": "Read pin value (HIGH/LOW)",
+        "LED_BUILTIN": "Constant for built-in LED pin"
+    },
+    "analog_io": {
+        "int val = analogRead(pin);": "Read analog value (0-1023)",
+        "analogWrite(pin, value);": "PWM output (0-255)",
+        "analogReference(type);": "Set reference voltage (DEFAULT, INTERNAL, EXTERNAL)",
+        "analogReadResolution(bits);": "Set ADC resolution (on supported boards)"
+    },
+    "advanced_io": {
+        "tone(pin, frequency);": "Generate square wave on pin",
+        "tone(pin, frequency, duration);": "Generate tone for duration ms",
+        "noTone(pin);": "Stop tone generation",
+        "shiftOut(dataPin, clockPin, bitOrder, value);": "Shift out 8 bits",
+        "unsigned long duration = pulseIn(pin, value);": "Measure pulse length",
+        "unsigned long duration = pulseInLong(pin, value);": "Measure long pulse length"
+    },
+    "time": {
+        "delay(ms);": "Pause in milliseconds",
+        "delayMicroseconds(us);": "Pause in microseconds",
+        "unsigned long ms = millis();": "Milliseconds since start",
+        "unsigned long us = micros();": "Microseconds since start"
+    },
+    "math": {
+        "val = abs(x);": "Absolute value",
+        "val = constrain(x, low, high);": "Constrain to range",
+        "val = map(value, fromLow, fromHigh, toLow, toHigh);": "Re-map value",
+        "val = max(x, y);": "Maximum of two values",
+        "val = min(x, y);": "Minimum of two values",
+        "val = pow(base, exponent);": "Power",
+        "val = sq(x);": "Square",
+        "val = sqrt(x);": "Square root"
+    },
+    "trigonometry": {
+        "double s = sin(rad);": "Sine (radians)",
+        "double c = cos(rad);": "Cosine (radians)",
+        "double t = tan(rad);": "Tangent (radians)"
+    },
+    "random_numbers": {
+        "long r = random(max);": "Random number 0 to max-1",
+        "long r = random(min, max);": "Random number min to max-1",
+        "randomSeed(seed);": "Initialize random generator"
+    },
+    "characters": {
+        "bool alpha = isAlpha(c);": "Check if alphabetic",
+        "bool alnum = isAlphaNumeric(c);": "Check if alphanumeric",
+        "bool ascii = isAscii(c);": "Check if ASCII",
+        "bool ctrl = isControl(c);": "Check if control character",
+        "bool digit = isDigit(c);": "Check if digit",
+        "bool graph = isGraph(c);": "Check if printable non-space",
+        "bool hex = isHexadecimalDigit(c);": "Check if hex digit",
+        "bool lower = isLowerCase(c);": "Check if lowercase",
+        "bool print = isPrintable(c);": "Check if printable",
+        "bool punct = isPunct(c);": "Check if punctuation",
+        "bool space = isSpace(c);": "Check if space",
+        "bool upper = isUpperCase(c);": "Check if uppercase",
+        "bool white = isWhitespace(c);": "Check if whitespace"
+    },
+    "bits_and_bytes": {
+        "int bit = bitRead(value, n);": "Read bit n",
+        "bitWrite(value, n, bit);": "Write bit n",
+        "bitSet(value, n);": "Set bit n to 1",
+        "bitClear(value, n);": "Clear bit n to 0",
+        "unsigned long b = bit(n);": "Value of bit n (2^n)",
+        "byte low = lowByte(w);": "Low byte of word",
+        "byte high = highByte(w);": "High byte of word"
+    },
+    "external_interrupts": {
+        "attachInterrupt(digitalPinToInterrupt(pin), ISR, mode);": "Attach interrupt handler (mode: LOW, CHANGE, RISING, FALLING, HIGH on some)",
+        "detachInterrupt(digitalPinToInterrupt(pin));": "Detach interrupt",
+        "noInterrupts();": "Disable all interrupts",
+        "interrupts();": "Enable all interrupts"
+    },
+    "communication": {
+        "Serial.begin(speed);": "Start hardware serial",
+        "Serial.println(val);": "Print with newline",
+        "Serial.print(val);": "Print without newline",
+        "Serial.write(val);": "Write byte",
+        "int incoming = Serial.read();": "Read incoming byte",
+        "int avail = Serial.available();": "Bytes available to read"
+    },
+    "wire_library_i2c": {
+        "#include <Wire.h>": "Include Wire library",
+        "Wire.begin();": "Join I2C bus as master",
+        "Wire.begin(address);": "Join as slave with address",
+        "Wire.beginTransmission(address);": "Start transmission to device",
+        "Wire.write(value);": "Queue byte for transmission",
+        "Wire.endTransmission();": "Send queued bytes",
+        "Wire.requestFrom(address, quantity);": "Request bytes from slave",
+        "int byte = Wire.read();": "Read received byte"
+    },
+    "spi_library": {
+        "#include <SPI.h>": "Include SPI library",
+        "SPI.begin();": "Initialize SPI",
+        "byte out = SPI.transfer(val);": "Send and receive byte",
+        "SPI.beginTransaction(settings);": "Set custom speed/order/mode",
+        "SPI.endTransaction();": "End custom settings"
+    },
+    "servo_library": {
+        "#include <Servo.h>": "Include Servo library",
+        "Servo myServo;": "Create Servo object",
+        "myServo.attach(pin);": "Attach to pin",
+        "myServo.write(angle);": "Write angle 0-180",
+        "myServo.writeMicroseconds(us);": "Precise control",
+        "int angle = myServo.read();": "Read current angle",
+        "myServo.detach();": "Detach servo"
+    },
+    "eeprom_library": {
+        "#include <EEPROM.h>": "Include EEPROM library",
+        "EEPROM.write(addr, val);": "Write byte",
+        "byte val = EEPROM.read(addr);": "Read byte",
+        "EEPROM.update(addr, val);": "Write only if different",
+        "EEPROM.put(addr, obj);": "Write object",
+        "EEPROM.get(addr, obj);": "Read object"
+    },
+    "lcd_parallel_library": {
+        "#include <LiquidCrystal.h>": "Include parallel LCD library",
+        "LiquidCrystal lcd(rs, en, d4, d5, d6, d7);": "Create object (4-bit mode)",
+        "lcd.begin(cols, rows);": "Initialize display size",
+        "lcd.print(\"text\");": "Print text",
+        "lcd.setCursor(col, row);": "Set cursor position",
+        "lcd.clear();": "Clear display",
+        "lcd.home();": "Cursor to home"
+    },
+    "lcd_i2c_library": {
+        "#include <LiquidCrystal_I2C.h>": "Include I2C LCD library (third-party)",
+        "LiquidCrystal_I2C lcd(0x27, 16, 2);": "Create object (common address 0x27 or 0x3F)",
+        "lcd.init();": "Initialize LCD",
+        "lcd.backlight();": "Turn on backlight",
+        "lcd.noBacklight();": "Turn off backlight"
+    },
+    "adafruit_circuitplayground_library": {
+        "#include <Adafruit_CircuitPlayground.h>": "Include Circuit Playground library",
+        "CircuitPlayground.begin();": "Initialize all sensors and NeoPixels",
+        "CircuitPlayground.redLED(HIGH);": "Turn red status LED on/off",
+        "int light = CircuitPlayground.lightSensor();": "Read light sensor value",
+        "float temp = CircuitPlayground.temperature();": "Read temperature in Celsius",
+        "float sound = CircuitPlayground.soundSensor();": "Read microphone level",
+        "bool left = CircuitPlayground.leftButton();": "Read left button state",
+        "bool right = CircuitPlayground.rightButton();": "Read right button state",
+        "CircuitPlayground.playTone(freq, duration);": "Play tone on speaker",
+        "CircuitPlayground.setPixelColor(i, r, g, b);": "Set NeoPixel color",
+        "CircuitPlayground.clearPixels();": "Turn off all NeoPixels"
+    },
+    "bridge_library": {
+        "#include <Bridge.h>": "Include Bridge library (for Yún)",
+        "Bridge.begin();": "Start Bridge communication",
+        "Bridge.put(key, value);": "Store key-value pair on Linux side",
+        "String val = Bridge.get(key, buffer, len);": "Retrieve value from key",
+        "Process p; p.runShellCommand(\"command\");": "Run Linux shell command"
+    },
+    "esplora_library": {
+        "#include <Esplora.h>": "Include Esplora library",
+        "int slider = Esplora.readSlider();": "Read slider value (0-1023)",
+        "int mic = Esplora.readMicrophone();": "Read microphone level",
+        "int light = Esplora.readLightSensor();": "Read light sensor",
+        "float temp = Esplora.readTemperature(DEGREES_C);": "Read temperature",
+        "int x = Esplora.readAccelerometer(X_AXIS);": "Read accelerometer X/Y/Z",
+        "bool btn = Esplora.readButton(SWITCH_DOWN);": "Read switch/buttons (SWITCH_1 to 4, SWITCH_DOWN/UP/LEFT/RIGHT)",
+        "Esplora.writeRGB(r, g, b);": "Set RGB LED color",
+        "Esplora.tone(freq, duration);": "Play tone on buzzer"
+    },
+    "ethernet_library": {
+        "#include <Ethernet.h>": "Include Ethernet library",
+        "Ethernet.begin(mac);": "Start Ethernet with DHCP",
+        "Ethernet.begin(mac, ip);": "Start with static IP",
+        "IPAddress local = Ethernet.localIP();": "Get local IP address",
+        "EthernetClient client;": "Create client object",
+        "EthernetServer server(port);": "Create server object"
+    },
+    "firmata_library": {
+        "#include <Firmata.h>": "Include Firmata library",
+        "Firmata.begin();": "Start Firmata protocol",
+        "Firmata.attach(ANALOG_MESSAGE, callback);": "Attach callback to message type",
+        "Firmata.sendAnalog(pin, value);": "Send analog value",
+        "Firmata.sendDigitalPort(port, value);": "Send digital port state"
+    },
+    "gsm_library": {
+        "#include <GSM.h>": "Include GSM library",
+        "GSM gsmAccess;": "Create GSM access object",
+        "GSMScanner scanner;": "Scan networks",
+        "GSMVoiceCall voiceCall;": "Handle voice calls",
+        "GSM_SMS sms;": "Send/receive SMS",
+        "gsmAccess.begin(PIN);": "Start modem (with PIN if needed)"
+    },
+    "keyboard_library": {
+        "#include <Keyboard.h>": "Include Keyboard library (USB boards)",
+        "Keyboard.begin();": "Start keyboard emulation",
+        "Keyboard.press(key);": "Press a key",
+        "Keyboard.release(key);": "Release a key",
+        "Keyboard.write(char);": "Write a character",
+        "Keyboard.print(\"text\");": "Print text",
+        "Keyboard.releaseAll();": "Release all keys"
+    },
+    "mouse_library": {
+        "#include <Mouse.h>": "Include Mouse library (USB boards)",
+        "Mouse.begin();": "Start mouse emulation",
+        "Mouse.move(x, y, wheel);": "Move cursor relative",
+        "Mouse.click(button);": "Click button",
+        "Mouse.press(button);": "Press button",
+        "Mouse.release(button);": "Release button"
+    },
+    "robot_control_library": {
+        "#include <ArduinoRobot.h>": "Include Robot Control library",
+        "Robot.begin();": "Initialize robot control board",
+        "Robot.beginTFT();": "Initialize TFT screen",
+        "Robot.beginSpeaker();": "Initialize speaker",
+        "Robot.text(\"text\", x, y);": "Draw text on screen",
+        "Robot.motorsWrite(speedL, speedR);": "Control left/right motors",
+        "int val = Robot.knobRead();": "Read knob value",
+        "Robot.drawCompass(heading);": "Draw compass on screen"
+    },
+    "robot_motor_library": {
+        "#include <Robot_Motor.h>": "Include Robot Motor library (often used with Control)",
+        "Robot.motorsStop();": "Stop both motors",
+        "Robot.turn(degrees);": "Turn robot by degrees",
+        "Robot.pointTo(degrees);": "Turn to absolute heading"
+    },
+    "robotirremote_library": {
+        "#include <IRremote.h>": "Include IR remote library (RobotIRremote is compatibility wrapper)",
+        "IRrecv irrecv(pin);": "Create IR receiver",
+        "IRsend irsend;": "Create IR sender",
+        "irrecv.enableIRIn();": "Enable receiver",
+        "irsend.sendNEC(code, bits);": "Send NEC code"
+    },
+    "sd_library": {
+        "#include <SD.h>": "Include SD library",
+        "SD.begin(csPin);": "Initialize SD card",
+        "File file = SD.open(\"file.txt\", FILE_WRITE);": "Open file for writing",
+        "file.println(\"data\");": "Write line to file",
+        "file.close();": "Close file",
+        "File file = SD.open(\"file.txt\");": "Open for reading"
+    },
+    "stepper_library": {
+        "#include <Stepper.h>": "Include Stepper library",
+        "Stepper myStepper(steps, pin1, pin2, pin3, pin4);": "Create stepper object",
+        "myStepper.setSpeed(rpm);": "Set speed in RPM",
+        "myStepper.step(steps);": "Move relative steps"
+    },
+    "tft_library": {
+        "#include <TFT.h>": "Include TFT library",
+        "TFT screen = TFT(cs, dc, rst);": "Create TFT object",
+        "screen.begin();": "Initialize screen",
+        "screen.background(r, g, b);": "Set background color",
+        "screen.stroke(r, g, b);": "Set drawing color",
+        "screen.text(\"text\", x, y);": "Draw text",
+        "screen.point(x, y);": "Draw point",
+        "screen.line(x1, y1, x2, y2);": "Draw line",
+        "screen.rect(x, y, w, h);": "Draw rectangle",
+        "screen.circle(x, y, r);": "Draw circle"
+    },
+    "wifi_library_old": {
+        "#include <WiFi.h>": "Include old WiFi library (for WiFi Shield)",
+        "WiFi.begin(ssid, pass);": "Connect to WPA network",
+        "WiFi.begin(ssid);": "Connect to open network",
+        "byte mac[] = WiFi.macAddress();": "Get MAC address",
+        "int status = WiFi.status();": "Get connection status",
+        "WiFiClient client;": "Create client",
+        "WiFiServer server(port);": "Create server"
+    },
+    "talkie_library": {
+        "#include <Talkie.h>": "Include Talkie speech synthesis library",
+        "#include <TalkieUtils.h>": "Utility header for additional functions",
+        "#include \"Vocab_US_Large.h\"": "Include large US English vocabulary",
+        "#include \"Vocab_Special.h\"": "Include special pauses and effects",
+        "Talkie voice;": "Create Talkie voice object",
+        "voice.doNotUseInvertedOutput();": "Use single output (pin 3)",
+        "voice.say(sp2_HELLO);": "Say predefined phrase (from vocab)",
+        "voice.sayQ(\"custom phrase\");": "Say custom queued phrase (advanced)",
+        "bool talking = voice.isTalking();": "Check if currently speaking"
+    },
+    "arduinojson_library": {
+        "#include <ArduinoJson.h>": "Include ArduinoJson library",
+        "DynamicJsonDocument doc(1024);": "Create dynamic JSON document",
+        "doc[\"sensor\"] = \"gps\";": "Add key-value to JSON",
+        "doc[\"data\"][0] = 42;": "Add to array",
+        "serializeJson(doc, Serial);": "Print JSON to Serial",
+        "deserializeJson(doc, input);": "Parse JSON from string/input",
+        "JsonObject obj = doc.as<JsonObject>();": "Access as object"
+    },
+    "irremote_library": {
+        "#include <IRremote.h>": "Include IRremote library",
+        "IRrecv irrecv(pin);": "Create IR receiver on pin",
+        "IRsend irsend;": "Create IR sender (uses pin 3 by default)",
+        "decode_results results;": "Structure for decoded data",
+        "irrecv.enableIRIn();": "Start receiver",
+        "if (irrecv.decode(&results)) { }": "Check and decode signal",
+        "irsend.sendNEC(code, bits);": "Send NEC protocol code",
+        "irsend.sendSony(code, bits);": "Send Sony protocol code"
+    },
+    "adafruit_unified_sensor_library": {
+        "#include <Adafruit_Sensor.h>": "Include unified sensor base",
+        "sensors_event_t event;": "Event structure for sensor data",
+        "sensor.getEvent(&event);": "Get sensor event",
+        "float temp = event.temperature;": "Access temperature from event",
+        "sensor_t sensor;": "Sensor metadata structure",
+        "sensor.getSensor(&sensor);": "Get sensor info"
+    },
+    "dht_sensor_library": {
+        "#include <DHT.h>": "Include DHT sensor library",
+        "#include <DHT_U.h>": "Unified version",
+        "DHT dht(pin, DHT22);": "Create DHT object (DHT11/DHT22/AM2302)",
+        "dht.begin();": "Initialize sensor",
+        "float h = dht.readHumidity();": "Read humidity",
+        "float t = dht.readTemperature();": "Read temperature in Celsius",
+        "float f = dht.readTemperature(true);": "Read in Fahrenheit",
+        "float hic = dht.computeHeatIndex(t, h, false);": "Compute heat index"
+    },
+    "onewire_library": {
+        "#include <OneWire.h>": "Include OneWire library",
+        "OneWire ds(pin);": "Create OneWire bus on pin",
+        "byte addr[8];": "Device address array",
+        "ds.reset_search();": "Start address search",
+        "ds.search(addr);": "Find next device",
+        "ds.reset();": "Reset bus",
+        "ds.write(byte);": "Write byte",
+        "byte data = ds.read();": "Read byte"
+    },
+    "dallas_temperature_library": {
+        "#include <DallasTemperature.h>": "Include Dallas Temperature library",
+        "OneWire oneWire(pin);": "Requires OneWire",
+        "DallasTemperature sensors(&oneWire);": "Create sensors object",
+        "sensors.begin();": "Initialize",
+        "sensors.requestTemperatures();": "Request temps from all devices",
+        "float temp = sensors.getTempCByIndex(0);": "Get temp by index",
+        "float temp = sensors.getTempC(addr);": "Get by address"
+    },
+    "fastled_library": {
+        "#include <FastLED.h>": "Include FastLED library",
+        "#define NUM_LEDS 60": "Define number of LEDs",
+        "CRGB leds[NUM_LEDS];": "LED array",
+        "FastLED.addLeds<WS2812B, PIN, GRB>(leds, NUM_LEDS);": "Add LEDs (chipset, pin, color order)",
+        "leds[i] = CRGB::Red;": "Set LED color",
+        "FastLED.show();": "Update LEDs",
+        "FastLED.setBrightness(100);": "Set global brightness"
+    },
+    "pubsubclient_library": {
+        "#include <PubSubClient.h>": "Include MQTT PubSubClient",
+        "PubSubClient client(wifiClient);": "Create client with network client",
+        "client.setServer(\"broker\", 1883);": "Set MQTT broker",
+        "client.setCallback(callback);": "Set message callback",
+        "client.connect(\"clientID\");": "Connect to broker",
+        "client.publish(\"topic\", \"payload\");": "Publish message",
+        "client.subscribe(\"topic\");": "Subscribe to topic",
+        "client.loop();": "Process incoming messages"
+    },
+    "esp8266wifi_library": {
+        "#include <ESP8266WiFi.h>": "Include ESP8266 WiFi library",
+        "WiFi.begin(ssid, password);": "Connect to WiFi",
+        "WiFi.mode(WIFI_STA);": "Set station mode",
+        "int status = WiFi.status();": "Get connection status",
+        "WiFiClient client;": "Create TCP client",
+        "WiFiServer server(80);": "Create server on port 80",
+        "WiFi.softAP(ssid);": "Start access point"
+    }
+}
